@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "core-js": "^3.2.1",
+    "d3": "^5.0.0"
+  },
+  "devDependencies": {
+    "powerbi-visuals-api": "^5.1.0"
+  }
+}
