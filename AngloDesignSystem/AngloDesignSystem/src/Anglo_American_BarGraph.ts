@@ -47,20 +47,11 @@ export class Visual implements IVisual {
     private textLabel: Selection<SVGElement>;
 
     constructor(options: VisualConstructorOptions) {
-        this.svg = d3.select(options.element)
-            .append('svg')
-            .classed('circleCard', true);
-        this.container = this.svg.append("g")
-            .classed('container', true);
-        this.circle = this.container.append("circle")
-            .classed('circle', true);
-        this.textValue = this.container.append("text")
-            .classed("textValue", true);
-        this.textLabel = this.container.append("text")
-            .classed("textLabel", true);
+      
     }
 
     public update(options: VisualUpdateOptions) {
+       //Set the width and height of components:
         let width: number = options.viewport.width;
         let height: number = options.viewport.height;
         this.svg.attr("width", width);
