@@ -7,9 +7,9 @@
     
   # Instructions:
   * Start your preferred CLI, such as Windows Powershell or CMD
-  * Start your local server on port ()
+  * Start your local server by typing the below command and pressing the enter key
 ```bash
-Command to start local server
+pbiviz start
 ```
   * Download files available on server
   * Open PowerBI and select "import"
