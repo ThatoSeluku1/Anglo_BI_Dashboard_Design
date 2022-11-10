@@ -12,37 +12,14 @@ var circleCard11D1BFF16F7C4796BA4340C755FD7553_DEBUG;
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(98323);
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(662);
-/*
-*  Power BI Visual CLI
-*
-*  Copyright (c) Microsoft Corporation
-*  All rights reserved.
-*  MIT License
-*
-*  Permission is hereby granted, free of charge, to any person obtaining a copy
-*  of this software and associated documentation files (the ""Software""), to deal
-*  in the Software without restriction, including without limitation the rights
-*  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-*  copies of the Software, and to permit persons to whom the Software is
-*  furnished to do so, subject to the following conditions:
-*
-*  The above copyright notice and this permission notice shall be included in
-*  all copies or substantial portions of the Software.
-*
-*  THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-*  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-*  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-*  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-*  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-*  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-*  THE SOFTWARE.
-*/
 
 
 
-//D3 Library:
+//Importing D3 Library:
 
+//Added class level properties:
 class Visual {
+    //Added D3 SVG:
     constructor(options) {
         this.svg = d3__WEBPACK_IMPORTED_MODULE_1__/* .select */ .Ys(options.element)
             .append('svg')
@@ -55,33 +32,35 @@ class Visual {
             .classed("textValue", true);
         this.textLabel = this.container.append("text")
             .classed("textLabel", true);
+        //Initialize rectangle
+        var svg = d3__WEBPACK_IMPORTED_MODULE_1__/* .select */ .Ys("#rect").append("svg").attr("width", 800).attr("height", 200);
     }
+    //Set the width and height of visuals:
     update(options) {
         let width = options.viewport.width;
         let height = options.viewport.height;
         this.svg.attr("width", width);
         this.svg.attr("height", height);
-        let radius = Math.min(width, height) / 2.2;
         this.circle
-            .style("fill", "white")
-            .style("fill-opacity", 0.5)
-            .style("stroke", "black")
+            .style("fill", "blue")
+            .style("fill-opacity", 1)
+            .style("stroke", "brown")
             .style("stroke-width", 2)
-            .attr("r", radius)
-            .attr("cx", width / 2)
-            .attr("cy", height / 2);
-        let fontSizeValue = Math.min(width, height) / 15;
+            .attr("r", 50)
+            .attr("cx", width / 10)
+            .attr("cy", height / 10);
+        let fontSizeValue = Math.min(width, height) / 5;
         this.textValue
             .text("Value")
-            .attr("x", "50%")
-            .attr("y", "50%")
+            .attr("x", "10%")
+            .attr("y", "10%")
             .attr("dy", "0.35em")
             .attr("text-anchor", "middle")
             .style("font-size", fontSizeValue + "px");
         let fontSizeLabel = fontSizeValue / 4;
         this.textLabel
             .text("Label")
-            .attr("x", "50%")
+            .attr("x", "100%")
             .attr("y", height / 2)
             .attr("dy", fontSizeValue / 1.2)
             .attr("text-anchor", "middle")

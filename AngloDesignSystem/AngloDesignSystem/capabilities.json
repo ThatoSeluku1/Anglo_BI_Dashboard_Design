@@ -1,3 +1,4 @@
+
 {
     "dataRoles": [
         {
@@ -17,5 +18,4 @@
             }
         }
     ],
-    "privileges": []
-}
+    "privileges": []}

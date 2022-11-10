@@ -46,50 +46,18 @@ export class Visual implements IVisual {
     private textValue: Selection<SVGElement>;
     private textLabel: Selection<SVGElement>;
 
-    constructor(options: VisualConstructorOptions) {
-        this.svg = d3.select(options.element)
-            .append('svg')
-            .classed('circleCard', true);
-        this.container = this.svg.append("g")
-            .classed('container', true);
-        this.circle = this.container.append("circle")
-            .classed('circle', true);
-        this.textValue = this.container.append("text")
-            .classed("textValue", true);
-        this.textLabel = this.container.append("text")
-            .classed("textLabel", true);
-    }
+public update(options: VisualUpdateOptions) {
+ // create svg element:
+var svg = d3.select("#rect").append("svg").attr("width", 800).attr("height", 200)
 
-    public update(options: VisualUpdateOptions) {
-        let width: number = options.viewport.width;
-        let height: number = options.viewport.height;
-        this.svg.attr("width", width);
-        this.svg.attr("height", height);
-        let radius: number = Math.min(width, height) / 2.2;
-        this.circle
-            .style("fill", "white")
-            .style("fill-opacity", 0.5)
-            .style("stroke", "black")
-            .style("stroke-width", 2)
-            .attr("r", radius)
-            .attr("cx", width / 2)
-            .attr("cy", height / 2);
-        let fontSizeValue: number = Math.min(width, height) / 15;
-        this.textValue
-            .text("Value")
-            .attr("x", "50%")
-            .attr("y", "50%")
-            .attr("dy", "0.35em")
-            .attr("text-anchor", "middle")
-            .style("font-size", fontSizeValue + "px");
-        let fontSizeLabel: number = fontSizeValue / 4;
-        this.textLabel
-            .text("Label")
-            .attr("x", "50%")
-            .attr("y", height / 2)
-            .attr("dy", fontSizeValue / 1.2)
-            .attr("text-anchor", "middle")
-            .style("font-size", fontSizeLabel + "px");
+// Add the path using this helper function
+svg.append('rect')
+  .attr('x', 10)
+  .attr('y', 120)
+  .attr('width', 600)
+  .attr('height', 40)
+  .attr('stroke', 'black')
+  .attr('fill', '#69a3b2'); 
     }
 
 }
