@@ -15,56 +15,20 @@ var circleCard11D1BFF16F7C4796BA4340C755FD7553_DEBUG;
 
 
 
-//Importing D3 Library:
 
 //Added class level properties:
 class Visual {
     //Added D3 SVG:
     constructor(options) {
-        this.svg = d3__WEBPACK_IMPORTED_MODULE_1__/* .select */ .Ys(options.element)
-            .append('svg')
-            .classed('circleCard', true);
-        this.container = this.svg.append("g")
-            .classed('container', true);
-        this.circle = this.container.append("circle")
-            .classed('circle', true);
-        this.textValue = this.container.append("text")
-            .classed("textValue", true);
-        this.textLabel = this.container.append("text")
-            .classed("textLabel", true);
-        //Initialize rectangle
-        var svg = d3__WEBPACK_IMPORTED_MODULE_1__/* .select */ .Ys("#rect").append("svg").attr("width", 800).attr("height", 200);
+        this.svg = (0,d3__WEBPACK_IMPORTED_MODULE_1__/* .select */ .Ys)(options.element).append('svg');
+        this.svg.append('rect')
+            .attr('width', 80)
+            .attr('height', 80)
+            .attr('fill', 'orange');
     }
     //Set the width and height of visuals:
     update(options) {
-        let width = options.viewport.width;
-        let height = options.viewport.height;
-        this.svg.attr("width", width);
-        this.svg.attr("height", height);
-        this.circle
-            .style("fill", "blue")
-            .style("fill-opacity", 1)
-            .style("stroke", "brown")
-            .style("stroke-width", 2)
-            .attr("r", 50)
-            .attr("cx", width / 10)
-            .attr("cy", height / 10);
-        let fontSizeValue = Math.min(width, height) / 5;
-        this.textValue
-            .text("Value")
-            .attr("x", "10%")
-            .attr("y", "10%")
-            .attr("dy", "0.35em")
-            .attr("text-anchor", "middle")
-            .style("font-size", fontSizeValue + "px");
-        let fontSizeLabel = fontSizeValue / 4;
-        this.textLabel
-            .text("Label")
-            .attr("x", "100%")
-            .attr("y", height / 2)
-            .attr("dy", fontSizeValue / 1.2)
-            .attr("text-anchor", "middle")
-            .style("font-size", fontSizeLabel + "px");
+        this.svg.select('rect').attr('fill', 'green');
     }
 }
 

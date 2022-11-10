@@ -5,13 +5,7 @@ import VisualConstructorOptions = powerbi.extensibility.visual.VisualConstructor
 import VisualUpdateOptions = powerbi.extensibility.visual.VisualUpdateOptions;
 import IVisual = powerbi.extensibility.visual.IVisual;
 export declare class Visual implements IVisual {
-    private host;
     private svg;
-    private container;
-    private circle;
-    private rectangle;
-    private textValue;
-    private textLabel;
     constructor(options: VisualConstructorOptions);
     update(options: VisualUpdateOptions): void;
 }
