@@ -2,13 +2,11 @@
 // put together by http://charlbotha.com/
 
 var items = [
-    {x : 50, y : 10},
-    {x : 100, y: 170},
-    {x : 320, y: 70}
+    {x : 200, y : 95}
 ];
 
 // we can increase this, everything will scale up with us
-var w=960,h=500,
+var w=2000,h=900,
     svg=d3.select("#chart")
         .append("svg")
         .attr("width",w)
@@ -40,8 +38,8 @@ filter.append("feGaussianBlur")
 // store result in offsetBlur
 filter.append("feOffset")
     .attr("in", "blur")
-    .attr("dx", 5)
-    .attr("dy", 5)
+    .attr("dx", 3)
+    .attr("dy", 3)
     .attr("result", "offsetBlur");
 
 // overlay original SourceGraphic over translated blurred opacity by using
@@ -57,9 +55,9 @@ feMerge.append("feMergeNode")
 var item = svg.selectAll("rect")
     .data(items)
   .enter().append("rect")
-    .attr("width", 170)
-    .attr("height", 100)
-    .attr("fill", "steelblue")
+    .attr("width", 1080)
+    .attr("height", 336)
+    .attr("fill", "#ffffff")
     .attr("stroke-width", 2)
     .style("filter", "url(#drop-shadow)")
     .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
