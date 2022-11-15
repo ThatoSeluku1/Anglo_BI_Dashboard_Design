@@ -1,0 +1,71 @@
+{
+  "name": "powerbi-visuals-histogram",
+  "version": "2.1.1",
+  "description": "A histogram chart plots data ranges into intervals. Useful for estimating density.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/PowerBI-visuals-histogram.git"
+  },
+  "keywords": [
+    "powerbi-visuals"
+  ],
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "package": "pbiviz package",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "pretest": "npm run lint",
+    "test": "karma start",
+    "cert": "pbiviz --create-cert"
+  },
+  "author": {
+    "name": "Microsoft",
+    "email": "pbicvsupport@microsoft.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Microsoft/PowerBI-visuals-histogram/issues"
+  },
+  "homepage": "https://github.com/Microsoft/PowerBI-visuals-histogram#readme",
+  "dependencies": {
+    "core-js": "^3.2.1",
+    "d3": "^5.4.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "powerbi-models": "^1.0.12",
+    "powerbi-visuals-utils-chartutils": "2.4.1",
+    "powerbi-visuals-utils-colorutils": "2.2.1",
+    "powerbi-visuals-utils-dataviewutils": "2.2.1",
+    "powerbi-visuals-utils-formattingutils": "4.4.2",
+    "powerbi-visuals-utils-interactivityutils": "5.6.0",
+    "powerbi-visuals-utils-svgutils": "2.2.1",
+    "powerbi-visuals-utils-tooltiputils": "2.3.1",
+    "powerbi-visuals-utils-typeutils": "2.2.1"
+  },
+  "devDependencies": {
+    "@types/d3": "^5.0.0",
+    "@types/jasmine": "2.5.37",
+    "@types/jasmine-jquery": "1.5.28",
+    "@types/jquery": "^2.0.46",
+    "@types/lodash": "4.14.52",
+    "coveralls": "3.0.2",
+    "jasmine": "2.5.2",
+    "jasmine-jquery": "2.1.1",
+    "karma": "4.4.1",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-coverage": "2.0.1",
+    "karma-jasmine": "2.0.1",
+    "karma-remap-istanbul": "0.6.0",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-typescript": "5.0.0-beta.0",
+    "karma-typescript-preprocessor": "0.4.0",
+    "karma-webpack": "4.0.2",
+    "powerbi-visuals-api": "^2.6.1",
+    "powerbi-visuals-tools": "3.1.7",
+    "powerbi-visuals-utils-testutils": "2.2.1",
+    "puppeteer": "1.13.0",
+    "tslint": "5.20.0",
+    "tslint-microsoft-contrib": "6.2.0",
+    "webpack": "4.41.2"
+  }
+}
