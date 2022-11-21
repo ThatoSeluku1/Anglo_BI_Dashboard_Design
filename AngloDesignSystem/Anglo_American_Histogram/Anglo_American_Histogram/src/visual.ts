@@ -113,6 +113,8 @@ import * as HistogramAxisHelper from "./axisHelper";
 import * as Default from "./constants";
 
 import "../style/visual.less";
+import "../style/colours.less";
+import "../style/fonts.less";
 import { Axis } from "d3";
 
 interface HistogramValue {
