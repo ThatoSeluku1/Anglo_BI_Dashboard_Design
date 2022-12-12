@@ -36,9 +36,11 @@ export interface Settings {
         selection: string;
         filter: any;
     };
-    headerText: {
+    headerText: { 
         marginLeft: number;
         marginTop: number;
+        marginCenter: number;
+        textSize: number;
     };
     slicerText: {
         textSize: number;
@@ -68,8 +70,10 @@ export const defaultSettings: Settings = {
         filter: null
     },
     headerText: {
+        textSize: 20,
         marginLeft: 8,
-        marginTop: 0
+        marginTop: 0,
+        marginCenter: 0,
     },
     slicerText: {
         textSize: 10,
@@ -78,7 +82,7 @@ export const defaultSettings: Settings = {
         hoverColor: '#212121',
         selectedColor: '#BDD7EE',
         unselectedColor: '#ffffff',
-        marginLeft: 8,
+        marginLeft: 28,
         transparency: 0,
         padding: 3
     },

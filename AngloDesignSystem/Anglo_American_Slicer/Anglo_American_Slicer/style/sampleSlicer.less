@@ -32,8 +32,52 @@
 @import (less) "node_modules/powerbi-visuals-utils-formattingutils/lib/index.css";
 @import (less) "node_modules/nouislider/distribute/nouislider.min.css";
 
-/* NEUTRAL COLORS */
-@blackColor: #000;
+/* Anglo American Colours */
+@TextBlack: #02070D;
+@Blue: #031795;
+    @Blue70Perc: #465EB6;
+    @Blue40Perc: #9AA2D5;
+@smartBlue: #347FF6;
+    @smartBlue70Perc: #6FA5F9;
+    @smartBlue40Perc: #ABCBFA;
+@Red: #FE0000;
+@White: #FFFFFF;
+
+
+/* Anglo American Secondary Palette*/
+@Orange: #FE9C00;
+     @Orange70Percent: #FFB066;
+     @Orange40Percent: #FFD2A7;
+@Yellow: #F5D700;
+     @Yellow70Percent: #F7E34D;
+     @Yellow40Percent: #FBEF99;
+@Green: #FE0000;
+    @Green70Percent: #97CA83;
+    @Green40Percent: #C2E0BB;
+@Turquiose: #19EBDC;
+    @Turquiose70Percent: #7FF0E9;
+    @Turquiose40Percent: #B9F6EF;
+@Purple: #6C2382;
+    @Purple70Percent: #9969A7;
+    @Purple40Percent: #C4A9CC;
+@Magenta: #B90C78;
+    @Magenta70Percent: #CD63A4;
+    @Magenta40Percent: #E8A5CB;    
+@Grey: #666666;
+
+//Anglo American Business Unit Colour Palette:
+@Platinum_Group_Metals: #4CADE2;
+@Diamonds: #73476F;
+@IronOre: #E74825;
+@Copper: #D18B4C;
+@Metallurgical_Coal: #999999;
+@Nickel: #A09B15;
+@Manganese: #FBBA00;
+@Crop_Nutrients: #006C41;
+@Marketing: #AA0352;
+
+
+@TextBlack: #02070D;
 @neutralDarkColor: #212121;
 @neutralPrimaryColor: #333333;
 @neutralPrimaryColorAlt: #444444;
@@ -42,7 +86,6 @@
 @neutralSecondaryColor: #666666;
 @neutralSecondaryAltColor: #777777;
 @neutralSecondaryAltColor2: #888888;
-@neutralSecondaryAltColor3: #999999;
 @neutralTertiaryColor: #A6A6A6;
 @neutralTertiaryAltColor: #C8C8C8;
 @neutralLightColor: #EAEAEA;
@@ -58,7 +101,8 @@
 @themeTertiaryColor: #F2C811;
 @themeLightColor: #F2C811;
 @themeLighterColor: #F2C811;
-@regularFontFamily: helvetica, arial, sans-serif;
+
+@AngloAmericanFontFamily: arial, sans-serif;
 
     .numeric-range-slicer {
         // Constants
@@ -80,8 +124,8 @@
 
             .numeric-range-slicer-select {
                 width: 100px;
-                margin-top: 5px;
-                margin-bottom: 10px;
+                margin-top: 15px;
+                margin-bottom: px;
                 outline: none;
             }
 
@@ -106,7 +150,7 @@
                         height: 2.16em;
                         padding: 0 0 0 0.5em;
                         font-size: inherit;
-                        border: 1px solid @neutralLightColor;
+                        border: 1px solid @smartBlue70Perc;
                         background-color: transparent;
                         transition: border 250ms;
                         opacity: 1;
@@ -116,7 +160,7 @@
                         }
 
                         &:active:enabled, &:focus:enabled {
-                            border-color: @themePrimaryColor;
+                            border-color: transparent;
                         }
                     }
                 }
@@ -140,8 +184,10 @@
 
 
 .sampleSlicer {
-    font-family: @regularFontFamily;
+    font-family: @AngloAmericanFontFamily;
     padding: 5px  6px 7px 4px;
+    font-size: 20px;
+    text-align: center;
     
     .clearButton {
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAMAAADHVLbdAAAAZlBMVEUAAADq6urp6enBwcHV1dWfn5+zs7O/v7/l5eWZmZmioqKjo6OlpaWmpqanp6eurq6vr6+xsbGzs7O2tra3t7e4uLi6urq9vb3Dw8PGxsbJycnMzMzNzc3Ozs7Pz8/Q0NDR0dH///9091kCAAAACXRSTlMARGaZmd3d3e7y4Z+JAAAAX0lEQVQIW3XI1xJAMBSE4dWiHUSJRPf+TymFCRf2Ymf+D/iZWr85sv2dAuAeZmGen5/UELtsbp+sby1lzgfzBwOq0CSzmpirQywuEUl9AanOJSBTfYo/qaEkygvqvfhdpMwD2G4l8pMAAAAASUVORK5CYII=);
@@ -153,7 +199,7 @@
         height: 18px;
         margin: 0 1px 0 6px;
         box-sizing: border-box;
-        border: 1px solid @neutralLightColor;
+        border: 1px solid @smartBlue70Perc;
         
         display: inline-block;
         float: right;
@@ -161,14 +207,14 @@
     }
 
     .searchToggle {
-        width: 13px;
-        height: 12px;
+        width: 15px;
+        height: 13px;
         margin: 4px 2px;
         float: right;
         cursor: pointer;
 
         background-size: cover;
-        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAk1BMVEUAAACnVx///+8AAAAAFycXAAAXJ1cfAAAfHx8fb78vX68/X4c/b6dHj89Xn9dXp99fF2dfL49fPydfPzdnt+9vPx9vv/eHx/+PRx+Pv+enVx+n3/+v1++3ZwC3Zx+3Z0+37//HhwDPjyfPjy/P7/fP///Xr4ffnz/nz6fvz6f3v3f/z4//76//98///9///+/////atKXiAAAAA3RSTlMA3d02gtHlAAAAbUlEQVR4AWOAATVhdmY2SQY40JXgUWFg0BDlhQnoSfFDaRGoiBYnlKEjqAphKItBRfTlpSEMRXEIjWCpi8DUyEJFtLlg5ggoQBhMcvwIOyEsRg6QezRF+RDO0VcTYmXhlkEIQFnkCzAoAQUIAADDFQhfMTPyzwAAAABJRU5ErkJggg==);
+        background-image: url(/assets/Search.png);
     }
 
     .row {
@@ -212,11 +258,11 @@
             align-content: center;
             align-items: stretch;
             box-sizing: border-box;
-            border: 1px solid @neutralLightColor;
+            border: 1px solid @smartBlue70Perc;
             border-radius: 5px;
 
             &:hover {
-                border-color: @neutralDarkColor;
+                border-color: @White;
             }
 
             .slicer-text-wrapper {
@@ -269,7 +315,7 @@
     }
 
     .slicerItemContainer.selected {
-        background: #BDD7EE;
+        background: @Green70Percent;
     }
 
     .row-horizontal {
@@ -294,7 +340,7 @@
             display: flex; // Opera, Firefox
             justify-content: space-between;
             -webkit-align-items: center;
-            border: 1px solid @neutralLightColor;
+            border: 1px solid @smartBlue70Perc;
             background-color: transparent;
             transition: border 250ms;
             opacity: 1;
@@ -304,7 +350,7 @@
 
 
         &:hover {
-            border-color: @neutralDarkColor;
+            border-color: @White;
         }
 
         &:active:enabled, &:focus:enabled {
@@ -315,11 +361,11 @@
             cursor: pointer;
             display: inline-block;
             margin: 4px 4px 3px;
-            color: @neutralDarkColor;
+            color: @Diamonds;
             width: 17px;
             height: 17px;
             background-size: cover;
-            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAMAAAAMs7fIAAAAk1BMVEUAAACnVx///+8AAAAAFycXAAAXJ1cfAAAfHx8fb78vX68/X4c/b6dHj89Xn9dXp99fF2dfL49fPydfPzdnt+9vPx9vv/eHx/+PRx+Pv+enVx+n3/+v1++3ZwC3Zx+3Z0+37//HhwDPjyfPjy/P7/fP///Xr4ffnz/nz6fvz6f3v3f/z4//76//98///9///+/////atKXiAAAAA3RSTlMA3d02gtHlAAAAbUlEQVR4AWOAATVhdmY2SQY40JXgUWFg0BDlhQnoSfFDaRGoiBYnlKEjqAphKItBRfTlpSEMRXEIjWCpi8DUyEJFtLlg5ggoQBhMcvwIOyEsRg6QezRF+RDO0VcTYmXhlkEIQFnkCzAoAQUIAADDFQhfMTPyzwAAAABJRU5ErkJggg==);
+            background-image: url(/assets/Search.png);
         }
 
         input {
@@ -341,22 +387,22 @@
 
 /// Height of the slider's handle
 /// @type String
-@control-height: 20px;
+@control-height: 32px;
 /// Width of the slider's handle
 /// @type String
-@control-width: 10px;
+@control-width: 32px;
 /// Color of the slider's handle
 /// @type Color
-@control-color: @neutralSecondaryColor;
+@control-color: @smartBlue;
 /// Size of the slider handle's text
 /// @type String
-@control-font-size: 18px;
+@control-font-size: 28px;
 /// Font Weight of the slider handle's text
 /// @type String
 @control-font-weight: 100;
 /// Color of the slider's "fill" when connected
 /// @type Color
-@fill-color: @neutralLightColor;
+@fill-color: @smartBlue;
 /// Height of the slider's gutter
 /// @type String
 @gutter-height: 4px;
@@ -378,20 +424,20 @@
     background:transparent;
 
 .noUi-base {
-    background-color: @neutralLightColor;
+    background-color: @smartBlue70Perc;
     height: 2px;
 
   .noUi-connect {
-    background-color: @neutralLightColor;
+    background-color: @smartBlue70Perc;
     height: 4px;
   }
   /// noUiSlider Handle
   .noUi-handle {
-    background-color: @control-color;
+    background-color: @smartBlue;
     border: none;
-    border-radius: 4px;
+    border-radius: 45px;
     box-shadow: none;
-    color: #FFFFFF;
+    color: #000000;
     display: table;
     font-size: 15px;
     height: @control-height;

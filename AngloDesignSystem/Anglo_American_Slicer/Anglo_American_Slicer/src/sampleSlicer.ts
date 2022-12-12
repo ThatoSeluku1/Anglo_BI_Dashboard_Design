@@ -441,7 +441,7 @@ export class SampleSlicer implements IVisual {
         const slicerContainer: Selection<any> = d3Select(outerContainer)
             .append('div')
             .classed(SampleSlicer.ContainerSelector.className, true)
-            .style('background', '#ffffff');
+            .style('background', 'transparent');
 
         this.initSearchWidget(slicerContainer.node());
 
@@ -495,8 +495,9 @@ export class SampleSlicer implements IVisual {
       this.slicerHeader
           .append('div')
           .classed(SampleSlicer.HeaderTextSelector.className, true)
-          .style('margin-left', PixelConverter.toString(headerText.marginLeft))
+          .style('margin-center', PixelConverter.toString(headerText.marginCenter))
           .style('margin-top', PixelConverter.toString(headerText.marginTop))
+          .style('textSize', PixelConverter.toString(headerText.textSize))
     }
 
     private updateHeader(): void {
@@ -582,7 +583,7 @@ export class SampleSlicer implements IVisual {
       this.rangeSlicer = d3Select(parent)
           .append('div')
           .classed(SampleSlicer.RangeSlicerSelector.className, true)
-          .style('background', '#ffffff');
+          .style('background', '#transparent');
 
         this.rangeSlicerHead = this.rangeSlicer
             .append('div')
