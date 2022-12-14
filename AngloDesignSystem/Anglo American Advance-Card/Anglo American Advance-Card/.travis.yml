@@ -1,0 +1,17 @@
+os:
+  - windows
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+  - "10"
+install:
+  - npm install
+  - npm run install-cert
+script:
+  - npm run lint
+  - npm run test
+after_success:
+  - node node_modules/coveralls/bin/coveralls.js < coverage/lcov.info
+notifications:
+  email: false

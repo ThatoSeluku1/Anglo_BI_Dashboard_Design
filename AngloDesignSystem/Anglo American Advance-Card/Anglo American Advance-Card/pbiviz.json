@@ -1,0 +1,23 @@
+{
+    "visual": {
+    "name": "AngloAmericanadvanceCard",
+    "displayName": "Anglo American Advance Card",
+    "guid": "AngloAmericanadvanceCardE03760C5AB684758B56AA29F9E6C257B",
+    "visualClassName": "visual",
+    "version": "3.0.2",
+    "description": "Advance card visual with more options than default card visual available in Power BI",
+    "supportUrl": "http://bhaveshjadav.in/powerbi/advancecard/",
+    "gitHubUrl": "https://github.com/bhavesh-jadav/Advance-Card/"
+    },
+    "author": {
+        "name": "Microsoft",
+        "email": "support@microsoft.com"
+    },
+    "assets": {
+        "icon": "assets/icon.png"
+    },
+    "style": "style/visual.less",
+    "capabilities": "capabilities.json",
+    "dependencies": null,
+    "stringResources": []
+}
