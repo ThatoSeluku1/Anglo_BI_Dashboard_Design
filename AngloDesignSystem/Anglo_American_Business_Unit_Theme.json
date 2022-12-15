@@ -1,0 +1,2 @@
+﻿{"name":"Anglo Business Unit Colour Pallete","dataColors":["#4CADE2","#73476F","#E74825","#D18B4C","#999999","#A09B15","#FBBA00","#006C41","#AA0352","#031795","#347FF6","#FE0000"],
+"bad":"#FE0000","neutral":"#FE8C00","good":"#64B246","center":"#6FA5F9","maximum":"#347FF6","textClasses":{"title":{"fontFace":"'Arial Black'"},"label":{"fontFace":"Arial"},"callout":{"fontFace":"Arial"},"header":{"fontFace":"Arial"}},"minimum":"#ABCBFA","visualStyles":{"*":{"*":{"outspacePane":[{"checkboxAndApplyColor":{"solid":{"color":"#FE8C00"}}}]}}}}
